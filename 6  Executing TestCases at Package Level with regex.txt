@@ -1,0 +1,54 @@
+
+Executing TestCases at Package Level with regex
+
+
+
+
+
+Eliminating More Than 30_40 Test Cases Within The Class
+
+There  Must be Testing Convention 
+
+Module Should Have Unique thing into TestCaseName
+
+<exclude name="Mobile.*"/>
+
+----------------------------------------------------------------
+  <test  name="Car Loan2">
+    <classes>
+    <class name="com.test.Day3">
+    <methods>   
+    <exclude name="first.*"/>
+    </methods>    
+    </class>
+    </classes>
+   </test>
+
+
+-----------------------------------------------------------------
+
+
+   Running The Tests at The Package Level :
+
+   <packages>
+   <package name="test"/>
+    </packages>
+
+--------------------------------------------------------------------------
+  
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Loan Department">
+
+
+  <test name="Personal Loan">
+    <packages>
+   <package name="com.test"/>
+    </packages>
+   </test>
+  
+ <!-- Test -->
+</suite> <!-- Suite -->

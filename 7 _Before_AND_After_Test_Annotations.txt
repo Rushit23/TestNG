@@ -1,0 +1,45 @@
+
+- Cleaning The data before Running The Automation tests
+
+
+
+@BeforeTest
+	public void fTets1()
+	{
+		
+		System.out.println(" before ");
+		
+	}
+
+With This Annotation it Will Execute the test Before Any Test Into The Block
+
+It DoesNot Matter InWhich Class You Place iT
+
+
+
+
+@AfterTest
+	public void fTets1()
+	{
+		
+		System.out.println(" before ");
+		
+	}
+
+
+
+
+Will Execute After All Tests in the Module
+
+/****** This Is Called As Module ******/
+
+ <test name="Personal Loan">
+    <classes>
+      <class name="com.test.Day4"/>   
+      <class name="com.test.Day2">       
+       <methods>   
+    <include name="demo"/>
+    </methods>
+      </class>
+    </classes>
+  </test>

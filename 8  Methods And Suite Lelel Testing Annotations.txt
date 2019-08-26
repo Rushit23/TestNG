@@ -1,0 +1,156 @@
+
+
+- Suite is Entire XML Document
+
+
+
+
+- @BeforeSuite
+Useful for SettingUp Global Environment Vriable
+
+The Scope Is All  The Files
+
+
+
+
+@AfterSuite
+Will Execute After All The Tests In the Suite
+
+
+// This Are Specific To The Class
+
+
+
+
+@BeforeMethod
+
+Will Execute Before Each And Every Method
+
+Useful For Deleting Cashe And Cookies 
+
+Into RestApi Useful For Authentication
+
+
+
+
+@AfterMethod 
+
+
+Diffrence Between Before TestMethod And Test
+BeforeTest : Depends upon XmlFile Based Upon TestFolder Scope
+
+
+
+
+
+
+BeforeMethod:
+
+Specific To The Class It will Execute Before Each and Every Method
+
+
+
+
+-@BeforeClass
+
+Before Executing Any Method In Class
+
+
+
+
+-@AfterClass
+
+After Executing All Test Method In Class
+
+
+
+--------------------------------------------------------------------------------------------
+
+package com.test;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Day5
+{
+	@BeforeClass
+	@Test
+	public void fTets2()
+	{
+		
+		System.out.println(" Hello ");
+		
+	}
+	
+	
+	@AfterClass
+	@Test
+	public void fTets3()
+	{
+		
+		System.out.println(" Hello ");
+		
+	}
+	
+	
+	@BeforeSuite
+	@Test
+	public void fTets4()
+	{
+		
+		System.out.println(" This is Before Suite ");
+		
+	}
+	
+	
+	@AfterSuite
+	@Test
+	public void fTets8()
+	{
+		
+		System.out.println(" This is After Suite ");
+		
+	}
+	
+	
+	@BeforeMethod
+	@Test
+	public void fTets10()
+	{
+		
+		System.out.println(" Will Execute Before Each And Every Test Method In Day5 Class  ");
+		
+	}
+	
+	
+	
+	@AfterMethod
+	@Test
+	public void fTets11()
+	{
+		
+		System.out.println(" Will Execute After Each And Every Test Method In Day5 Class  ");
+		
+	}
+	
+	
+	
+	
+	
+	
+	@BeforeTest
+	public void fTets5()
+	{
+		
+		System.out.println(" before ");
+		
+	}
+	
+	
+}

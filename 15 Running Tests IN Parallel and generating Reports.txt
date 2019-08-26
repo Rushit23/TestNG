@@ -1,0 +1,51 @@
+
+Fram
+
+Running Tests IN Parallel and generating Reports
+
+Make The Changes at the Suite Level 
+
+ 	 <!-- Running Tests Parallel at suite Level -->
+	<!-- <suite name="Loan Department" parallel="tests" thread-count="2"> -->
+	
+	 <!-- Running Tests Parallel at Class Level -->
+	  <!-- <test name="Personal Loan" parallel="classes" thread-count="2"> -->
+
+
+
+
+
+_______________________________________________________________________________________________________________________________
+
+
+
+When You catch Listners how do you Know The Test Name 
+
+With The Help Of 
+
+ result.gerName();
+
+
+ 	@Override
+	public void onTestFailure(ITestResult result) {
+		// TODO Auto-generated method stub
+		//screenshot code 
+		//response if API is failed
+		
+	System.out.println("I failed executed Listeners Pass code" + result.getName());
+
+	}
+
+
+	_______________________________________________________________________________________________________________________________
+
+
+
+
+Viewing The Tets Results 
+
+
+TestOutPut : Index.html View it in Browser
+
+
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <test name="PersonalLoan">
+    <classes>
+      <class name="test.FirstTest"/>
+       <class name="test.SecondTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="ExcludeExample">
+    <classes>
+      <class name="test.FourthTest">
+      <methods>   
+    <exclude name="FirtTestCase"/>
+    </methods>
+    </class>
+    </classes>
+  </test> 
+  
+  
+  
+    <test name="ExcludeStartsWithExample">
+    <classes>
+      <class name="test.FifthTest">
+      <methods>   
+    <exclude name="Facebook.*"/>
+    </methods>
+    </class>
+    </classes>
+  </test> 
+  
+  <test name="IncludeExample">
+    <classes>
+      <class name="test.ThirdTest">
+      <methods>   
+    <include name="FirtTestCase"/>
+    </methods>
+    </class>
+    </classes>
+  </test>
+  
+  
+  <!-- Test -->
+  
+</suite> <!-- Suite -->

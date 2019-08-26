@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+<!--Running The Test at Package Level Will Run The All The Tests Within the class -->
+
+<!-- Excluding 
+
+
+ <groups>
+  <run>
+  <exclude name="smoke"/>  
+  </run>  
+  </groups> 
+  
+  -->
+
+
+
+
+
+
+
+
+  <test name="RegressionTesting">
+  <parameter name="URL" value="www.rushitpatel.com"/>
+  <parameter name="APIKEY" value="www.rushitpatel.com"/>
+   <groups>
+  <run>
+  <include name="smoke"/>  
+  </run>  
+  </groups>
+       <classes>
+      <class name="test.FirstTest"/> 
+      <class name="test.SecondTest"/>
+      <class name="test.ThirdTest"/>  
+      <class name="test.FourthTest"/>
+      <class name="test.FifthTest"/>
+      <class name="test.SixthTest"/>     
+    </classes> 
+  </test> 
+  
+    
+  <!-- Test -->
+  
+</suite> <!-- Suite -->

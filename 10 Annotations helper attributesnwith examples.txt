@@ -1,0 +1,51 @@
+
+
+Annotations helper attributesnwith examples
+
+
+- Changing the execution order
+
+- You Can Use dependsOnMethods and Multiple DependsOnMethods
+
+
+		public void fTets88()
+		{
+			
+			System.out.println(" Pela Maro Varo");
+			
+		}
+
+
+		@Test(dependsOnMethods={"fTets88","fTets89"})
+		public void ATets9()
+		{
+			
+			System.out.println(" Hello ");
+			
+		}
+
+----------------------------------------------------------------------------------
+
+		Skipping The Particular Test :  This Test Will Not Get Executed
+
+
+
+		@Test(enabled= false)
+		public void fTets88()
+		{
+			
+			System.out.println(" Pela Maro Varo");
+			
+		}
+	
+----------------------------------------------------------------------------------
+
+		If A Test Case Takes Long Time to Execute :
+
+	@Test(timeOut=4000)
+	public void fTets55()
+	{
+		
+		System.out.println(" before ");
+		
+	}

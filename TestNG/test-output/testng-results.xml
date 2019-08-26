@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="7" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="122697" started-at="2019-06-15T00:07:08Z" finished-at="2019-06-15T00:09:10Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="122697" started-at="2019-06-15T00:07:08Z" finished-at="2019-06-15T00:09:10Z">
+      <class name="test.Seven">
+        <test-method status="PASS" signature="FacebookLogIN(java.lang.String, java.lang.String)[pri:0, instance:test.Seven@71f2a7d5]" name="FacebookLogIN" duration-ms="50433" started-at="2019-06-14T18:07:08Z" data-provider="getData" finished-at="2019-06-14T18:07:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FirstUsername ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[FirstPassword ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FacebookLogIN -->
+        <test-method status="PASS" signature="FacebookLogIN(java.lang.String, java.lang.String)[pri:0, instance:test.Seven@71f2a7d5]" name="FacebookLogIN" duration-ms="25288" started-at="2019-06-14T18:07:58Z" data-provider="getData" finished-at="2019-06-14T18:08:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Second Username ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Second Password ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FacebookLogIN -->
+        <test-method status="PASS" signature="FacebookLogIN(java.lang.String, java.lang.String)[pri:0, instance:test.Seven@71f2a7d5]" name="FacebookLogIN" duration-ms="22544" started-at="2019-06-14T18:08:23Z" data-provider="getData" finished-at="2019-06-14T18:08:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Third Username]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ Third Password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FacebookLogIN -->
+        <test-method status="PASS" signature="FacebookVerifyTitle()[pri:0, instance:test.Seven@71f2a7d5]" name="FacebookVerifyTitle" duration-ms="12081" started-at="2019-06-14T18:08:46Z" finished-at="2019-06-14T18:08:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FacebookVerifyTitle -->
+        <test-method status="PASS" signature="MyPortfolioVerifyTitle()[pri:0, instance:test.Seven@71f2a7d5]" name="MyPortfolioVerifyTitle" duration-ms="12268" started-at="2019-06-14T18:08:58Z" finished-at="2019-06-14T18:09:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MyPortfolioVerifyTitle -->
+      </class> <!-- test.Seven -->
+      <class name="test.Nine">
+        <test-method status="FAIL" signature="FacebookVerifyTitle()[pri:0, instance:test.Nine@4b6995df]" name="FacebookVerifyTitle" duration-ms="16843" started-at="2019-06-14T18:07:08Z" finished-at="2019-06-14T18:07:25Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Facebook - Log In or Sign Up] but found [Log into Facebook | Facebook]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Facebook - Log In or Sign Up] but found [Log into Facebook | Facebook]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at test.Nine.FacebookVerifyTitle(Nine.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FacebookVerifyTitle -->
+        <test-method status="PASS" signature="MyPortfolioVerifyTitle()[pri:0, instance:test.Nine@4b6995df]" name="MyPortfolioVerifyTitle" duration-ms="16004" started-at="2019-06-14T18:07:25Z" finished-at="2019-06-14T18:07:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MyPortfolioVerifyTitle -->
+      </class> <!-- test.Nine -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

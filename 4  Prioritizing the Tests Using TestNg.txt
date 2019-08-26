@@ -1,0 +1,37 @@
+Prioritizing the Tests Using TestNg :
+
+
+
+You Can Group The Test cases According To The Classes :
+
+Running and Skipping The Test Classes :
+
+-------------------------------------------------------------
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Loan Department">
+
+  <test name="Personal Loan">
+    <classes>
+      <class name="com.test.Day4"/>
+      <class name="com.test.Day3"/>
+     
+      <class name="com.test.Day2"/>
+    </classes>
+  </test>
+  
+   <test  name="Car Loan">   <!-- For Running Test Seprately Within Class -->
+    <classes>
+    <class name="com.test.firstTestCase"/> <!-- Starts With Package Name Then Class Name -->
+    </classes>
+   </test>
+  
+  
+</suite>
+
+
+
+-------------------------------------------------------------

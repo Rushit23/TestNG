@@ -1,0 +1,12 @@
+1 TestNG Installation
+
+- TestNG.Org
+
+- Downloading and Configuring TestNG
+
+- Click On Install The Plug-in
+
+- Eclipse > Help > Install New Software > enter the site URL > Next
+
+- Window > Preferences > Search TestNG to verify whether it is installed or Not
+

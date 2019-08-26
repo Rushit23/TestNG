@@ -1,0 +1,55 @@
+
+
+	Running Seprate Test Cases Within Diffrent Classes
+
+	Few Methods Inside The Single class
+
+	There Is Concept Called Groups Into TestNG
+
+	Provide The tag
+
+	@Test(groups={"Smoke"})
+
+	Create A Seprate XML File :
+
+	Provide The Classes and Create The Groups Tag
+
+	They Get Executed Into Alphabetic Oreder
+
+
+
+
+	--------------------------------------------------------
+
+		@Test(groups={"Smoke"})
+	public void demo()
+	{
+		
+		System.out.println(" Smoke Test 3 ");
+		
+	}
+	
+
+	-----------------------------------------------------------
+
+	<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+ <!-- Running The Test Cases At Package Level -->
+<suite name="Loan Department">
+
+
+  <test name="Smoke Testing">
+  <groups>
+  <run>
+  <include name="Smoke"/>  
+  </run>  
+  </groups>
+       <classes>
+      <class name="com.test.Day4"/> 
+      <class name="com.test.Day5"/>
+      <class name="com.test.Day2">       
+      </class>
+    </classes>    
+   </test>
+</suite> <!-- Suite -->

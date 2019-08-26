@@ -1,0 +1,49 @@
+
+Parameterising from TestNG XML File
+
+- Global variable have the common values Like Usename, Password , URL
+
+- Main Details Should Always Come From One Centralised File
+
+- You Can Define That Value After The Suite
+
+------------------------------------------------------------------------------------------
+
+<parameter name="URL" value="Amazon.com"/>
+
+
+To Bring The Value 
+
+	@Parameters({"URL"})
+	@Test
+	public void Parametrization(String url)
+	{
+		
+		System.out.println(url);
+		
+	}
+
+
+	You Can put That For Diffrent levels 
+
+
+------------------------------------------------------------------------------------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Loan Department">
+<parameter name="URL" value="Amazon.com"/>
+
+  <test name="Personal Loan">
+    <classes>    
+      <class name="com.test.Day2"/>       
+    </classes>
+  </test>
+  
+  
+
+  
+   <!-- Test -->
+</suite> <!-- Suite -->

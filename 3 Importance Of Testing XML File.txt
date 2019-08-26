@@ -1,0 +1,5 @@
+L_6_ Importance Of Testing XML File
+
+You Can trigger ALL The TestsFrom The XML File 
+
+Rc On Project > TestNg > ConvertTo TestNg

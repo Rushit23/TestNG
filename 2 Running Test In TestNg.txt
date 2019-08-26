@@ -1,0 +1,11 @@
+5_ Running Test In TestNg
+
+ - TestNg Itself Acts As a Java Compiler to run the tests and Need Not to 
+
+-  We are Using TestNg Library Instaid Of Java Compiler
+
+-  Output is Neatly Organized
+
+-  Create Project > Create Package Test > Create Class Day1
+
+-  USe :  @Test Annotation

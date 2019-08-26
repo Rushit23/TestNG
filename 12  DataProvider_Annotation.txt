@@ -1,0 +1,87 @@
+
+
+DataProvider_Annotation
+
+
+-------------------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Loan Department">
+
+<parameter name="URL" value="Amazon.com"/>
+<parameter name="APIKEY/username" value="www.maganlal.com"/>
+
+  <test name="Personal Loan">
+    <classes>    
+      <class name="com.test.Day2"/>       
+    </classes>
+  </test>
+  
+  
+
+  
+   <!-- Test -->
+</suite> <!-- Suite -->
+
+
+
+-----------------------------------------------------------------------------------
+
+@Parameters({"URL","APIKEY/username"})
+	@Test
+	public void Parametrization(String url,String Website )
+	{
+		
+		System.out.println(url);
+		System.out.println(Website);
+		
+	}
+
+
+
+------------------------------------------------------------------------------------
+
+
+You Can Run Single Test With Different Data Types
+
+3: Is a Row and 2 : is a Column
+
+Into MultiDimensional Array Ech Combination is Row
+
+Column And Row Strats With 0 Index
+
+1 st Combination- UserName Password- Good credit History
+
+2nd Combination - UserName Password -No Credit History
+
+3rd- fraudelent credit history
+
+Columns in the row are nothing but values for that particular Combination (row)
+
+
+
+---------------------------------------------------------------------------------
+	@DataProvider
+	public void getData()
+	{
+		Object [] [] data = new Object [3][2];
+
+		// 1st Set
+
+		data [0][0]="FirstUsername ";
+		data [0][1]="FirstPassword ";
+
+		// 2nd Set 
+
+		data [1][0]="Second Username ";
+		data [1][1]="Second Password ";
+
+
+		// 3rd Set 
+		
+		data [2][0]="Third Username";
+		data [2][1]=" Third Password";
+
+	}

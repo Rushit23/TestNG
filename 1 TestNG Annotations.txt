@@ -1,0 +1,431 @@
+
+
+
+Rushit Patel - QA Tester
+
+https://www.rushitpatel.com
+
+rushitpatel1123@gmail.com
+
+https://www.linkedin.com/in/rushitpatel23/
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+								 TestNG 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Before Class / After Class  
+
+Before Method / After Method are the Annotations At the Class Level
+
+
+Before Test and Before Suite Are The TestNG Level Annotations
+
+
+Order  of Test Execution Depends Upon The Alphabetical Order
+
+
+Running The Tests  From  Different Classes  We Can Use The Groups Feature to Run The Tests From the Different Classes.
+
+Groups Picking Up Few Selected Tags Out Of Regression Suite
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------	Annotations in TestNG	-------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+@BeforeTest
+With This Annotation it Will Execute the test Before Any Test Into The Block
+It DoesNot Matter InWhich Class You Place iT
+
+
+
+
+@AfterTest
+Will Execute After All Tests in the Module
+
+
+
+- @BeforeSuite
+Useful for SettingUp Global Environment Vriable
+The Scope Is All  The Files
+
+
+
+
+@AfterSuite
+Will Execute After All The Tests In the Suite
+
+
+
+
+// This Are Specific To The Class
+@BeforeMethod
+
+Will Execute Before Each And Every Method
+Useful For Deleting Cashe And Cookies 
+Into RestApi Useful For Authentication
+
+@AfterMethod 
+
+
+/*******************************************************/
+	Diffrence Between Before TestMethod And Test
+	BeforeTest : Depends upon XmlFile Based Upon TestFolder Scope
+
+/*******************************************************/
+
+BeforeMethod:
+
+Specific To The Class It will Execute Before Each and Every Method
+
+
+
+
+
+-@BeforeClass
+
+Before Executing Any Method In Class
+
+
+
+
+-@AfterClass
+
+After Executing All Test Method In Class
+
+
+
+
+
+
+@Test(groups={"Smoke"})
+Running Seprate Test Cases Within Diffrent Classes
+
+
+
+
+@Test(enabled= false)
+Skipping The Particular Test :  This Test Will Not Get Executed
+
+
+
+		
+
+@Test(timeOut=4000)
+If A Test Case Takes Long Time to Execute :
+
+
+
+
+@Test(dependsOnMethods={"fTets88","fTets89"})
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------     Parameterization in TestNG   --------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+2 Ways To Achive Parametrization 
+
+1)  We Can Drive The Data from XML File 
+
+2) 	We Can Use The data Provider Annotation 
+
+
+If  You Have Any Dependency From XML File You Will Have To Run The Tests From The XML File
+
+
+
+
+
+
+ <parameter name="URL" value="www.rushitpatel.com"/>
+
+
+@Parameters({"URL"})
+@Test
+public void Parametrization(String url)
+{
+		
+System.out.println(url);
+		
+}
+
+
+
+
+
+
+@Parameters({"URL","APIKEY/username"})
+	@Test
+	public void Parametrization(String url,String Website )
+	{
+		
+		System.out.println(url);
+		System.out.println(Website);
+		
+	}
+
+
+
+
+
+
+
+
+
+
+Running The Tests Multiple Times
+----------------------------------------------------------
+
+		@DataProvider
+		public Object[][] getData()
+		{
+			Object [] [] data = new Object [3][2];
+
+			// 1st Set
+
+			data [0][0]="FirstUsername ";
+			data [0][1]="FirstPassword ";
+
+			// 2nd Set 
+
+			data [1][0]="Second Username ";
+			data [1][1]="Second Password ";
+
+
+			// 3rd Set 
+			
+			data [2][0]="Third Username";
+			data [2][1]=" Third Password";
+			
+			return data;
+
+		}
+
+
+
+
+
+- You Can use DataProvider Annotation
+
+	@Test(dataProvider="getData")
+	public void fTets3(String Username,String Password)
+	{
+		
+		System.out.println(" Hello ");
+		
+	}
+
+
+
+		First Column Will Decide How Many Times The test Will Run
+
+		Second Column Will Decide How Many data You're DEalin 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------	TestNGListeners	------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------															
+
+
+
+Create Class Listeners
+
+// ITestListeners  , Impliment Listener Interface
+
+
+// You Will Have To Tell XML Where This Listeners Class Is Located
+
+
+------------- INTO XML -----------------------------
+
+<listeners>
+<listener class-name="test.Listeners"/>
+</listeners>
+
+
+
+
+-----------------------------------------------------------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Loan Department">
+
+<listeners>
+<listener class-name="com.test.Listeners"/>
+</listeners>
+
+<parameter name="URL" value="Amazon.com"/>
+<parameter name="APIKEY/username" value="www.maganlal.com"/>
+
+  <test name="Personal Loan">
+    <classes>    
+      <class name="com.test.Day2"/>       
+    </classes>
+  </test>
+  
+  
+
+  
+   <!-- Test -->
+</suite> <!-- Suite -->
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Running The Tests At The Package Level and Class Level  Into XML
+---------------------------------------------------------------------------------------
+
+   <test name="Smoke Testcases">
+    <packages>
+       <package name="pageobjecttestcases" />      
+    </packages>
+    
+    </test>
+
+ <test name="Test">
+    <classes>
+      <class name="Framework.AppTest"/>
+    </classes>
+  </test> <!-- Test -->
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+package com.test;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+ITestListener interface which implements Testng listeners
+
+public class Listeners implements ITestListener {
+
+	@Override
+	public void onTestStart(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("I successfully executed Listeners Pass code");
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+		// TODO Auto-generated method stub
+		//screenshot code 
+		//response if API is failed
+		
+	//	System.out.println("I failed executed Listeners Pass code" +result.getName());
+
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------	Running Tests  Parallel and generating Reports	-------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	
+We Can The Tests Parallel at Class Level Or Test(Suite) Level
+
+
+	Make The Changes at the Suite Level 
+
+ 	 <!-- Running Tests Parallel at suite Level -->
+	<!-- <suite name="Loan Department" parallel="tests" thread-count="2"> -->
+	
+
+
+	 <!-- Running Tests Parallel at Class Level -->
+	  <!-- <test name="Personal Loan" parallel="classes" thread-count="2"> -->
+
+
+
+
+
+
+  <test name="Test" parallel="classes" thread-count="2">
+    <classes>
+    <class name="test.Seven"/>
+       <class name="test.Nine"/>
+    </classes>
+  </test> <!-- Test -->
+

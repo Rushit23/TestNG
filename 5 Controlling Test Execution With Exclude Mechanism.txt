@@ -1,0 +1,43 @@
+
+ Controlling Test Execution With Exclude Mechanism 
+
+
+- Runnig seprate Test Cases Within The Class 
+
+- Into TestNg All Methods are Represented As TestCase
+
+- With Exclude  Tag You Can Skip Methods 
+
+
+----------------------------------------------------
+XML:  FOR EXCLUDING THE TEST CASE
+
+ <test  name="Car Loan">
+    <classes>
+    <class name="com.test.firstTestCase">
+    <methods>   
+    <exclude name="sTets"/>
+    </methods>    
+    </class>
+    </classes>
+   </test>
+
+
+   FOR INCLUDING TEST CASE 
+
+
+     <test name="Personal Loan">
+    <classes>
+      <class name="com.test.Day4"/>
+      <class name="com.test.Day3"/>     
+      <class name="com.test.Day2">       
+       <methods>   
+    <include name="demo"/>
+    </methods>
+      </class>
+    </classes>
+  </test>
+
+
+
+----------------------------------------------------
